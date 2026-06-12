@@ -314,7 +314,7 @@
            ======================================== */
         .gallery {
             background-color: var(--bg-primary);
-            padding: 6rem 2rem;
+            padding: 6rem 1rem;
             position: relative;
             z-index: 2;
         }
@@ -329,16 +329,19 @@
 
         .screenshots-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2.5rem;
-            max-width: 1400px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem 1rem;
+            max-width: 900px;
             margin: 0 auto;
+            row-gap: 2.5rem;
         }
 
         @media (max-width: 1024px) {
             .screenshots-grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 2rem;
+                gap: 1rem 1rem;
+                max-width: 800px;
+                row-gap: 2.5rem;
             }
         }
 
@@ -353,7 +356,7 @@
         .phone-frame {
             position: relative;
             width: 100%;
-            max-width: 280px;
+            max-width: 320px;
             margin: 0 auto;
             aspect-ratio: 9 / 19.5;
             background: #000;
@@ -775,10 +778,10 @@
     <script>
         // ======== VARIABLES GLOBALES ========
         let currentImageIndex = 1;
-        const totalImages = 29;
+        const totalImages = 28;
         
-        // Orden de imágenes: imagen29 va después de imagen7
-        const imageOrder = [1, 2, 3, 4, 5, 6, 7, 29, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28];
+        // Orden de imágenes: imagen29 va después de imagen7, imagen10 eliminada
+        const imageOrder = [1, 2, 3, 4, 5, 6, 7, 29, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28];
         
         function getImageNumber(position) {
             return imageOrder[position - 1];
